@@ -1,0 +1,55 @@
+<html>
+
+    <head>
+        <title>Update</title>
+		<meta charset="utf-8">
+    </head>
+    <body>
+        
+        <form method='post'>
+            
+            <table>
+                
+                <tr>
+                    <td><label>ID</label></td>
+                    <td><input type='text' name='id' value='<%= item.id %>' disabled='true'></td>
+                </tr>
+                
+                <tr>
+                    <td><label>Name</label></td>
+                    <td><input type='text' name='name' value='<%= item.name %>'></td>
+                </tr>
+                
+                <tr>
+                    <td><label>Part</label></td>
+                    <td>
+                        
+                        <input type='radio' name='part' value='plan' 
+                               <%= item.part == 'plan' ? 'checked' : '' %>>Plan
+                        
+                        <br>
+                        
+                        <input type='radio' name='part' value='develop' 
+                               <%= item.part == 'develop' ? 'checked' : '' %>>Develop
+                        
+                        <br>
+                        
+                        <input type='radio' name='part' value='design'
+                               <%= item.part == 'design' ? 'checked' : '' %>>Design
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><label>Introduce</label></td>
+                    <td><textarea name='introduce'><%= item.introduce %></textarea></td>
+                </tr>
+                
+            </table>
+            
+            <input type='submit'>
+            
+        </form>
+        
+    </body>
+
+</html>
